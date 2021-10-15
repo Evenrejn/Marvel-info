@@ -1,38 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+#root {
+  margin: 0 auto;
+  background-image: url(./assets/bgAsset.png);
+  background-repeat: no-repeat;
+  background-position: 98% 111%;
+}
+
 .App {
-  text-align: center;
+  width: 1100px;
+  margin: 0 auto;
+  padding-top: 55px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.headerTitle {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headerTitleMain {
+  color: #9F0013;
+}
+
+.headerBreadcrumbsMain {
+  color: #9F0013;
+}
+
+.headerBreadcrumbs {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.topWrap {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.wrap {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+.topImg {
+  padding: 35px 40px;
+  width: 180px;
+  height: 180px;
+}
+
+.topCard {
+  width: 265px;
+  margin-right: 35px;
+  padding-top: 35px;
+}
+
+.topCardTitle {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.topCardText {
+  padding-bottom: 13px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.topInnerBtn {
+  width: 101px;
+  height: 38px;
+  background: #9F0013;
+  margin-right: 30px;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 11px 18px;
+}
+
+.topBtn {
+  width: 101px;
+  height: 38px;
+  background: #5C5C5C;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 11px 18px;
+}
+
+.random {
+  color: white;
+  padding: 35px 40px;
+  width: 550px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  background: #232222;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  background-image: url(./assets/Decoration.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 33%;
+}
+
+.randomText {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.randomBtn {
+  width: 101px;
+  height: 38px;
+  background: #9F0013;
   color: white;
+  margin-top: 13px;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
-.App-link {
-  color: #61dafb;
+.mainWrap {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cardList {
+  width: 60%;
+}
+
+.cardsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 675px;
+}
+
+.card {
+  width: 200px;
+  min-height: 318px;
+  background-color: #232222;
+  margin-right: 25px;
+  margin-bottom: 31px;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
+}
+
+.cardImg {
+  width: 200px;
+  height: 200px;
+}
+
+.cardTitle {
+  margin: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.cardsListBtn {
+  width: 170px;
+  height: 38px;
+  background: #9F0013;
+  color: white;
+  margin: 14px auto 45px 240px;
+  padding: 10px 40px;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.about {
+  width: 425px;
+  box-sizing: border-box;
+  padding: 25px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.aboutTop {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.aboutImg {
+  width: 150px;
+  height: 150px;
+  margin-right: 25px;
+}
+
+.aboutTitle {
+  margin-bottom: 35px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.aboutInnerLink {
+  width: 101px;
+  height: 38px;
+  background: #9F0013;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 11px 18px;
+}
+
+.aboutLink {
+  width: 101px;
+  height: 38px;
+  background: #5C5C5C;
+  margin-top: 10px;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: 11px 18px;
+}
+
+.aboutDesc {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.aboutComics {
+  margin-bottom: 14px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.aboutComicsListsItem {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.searchInput {
+  width: 250px;
+  height: 38px;
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  outline: none;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.searchBtn {
+  width: 101px;
+  height: 38px;
+  background: #9F0013;
+  margin-left: 24px;
+  color: white;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 11px 18px;
+}
+
+.search {
+  margin-top: 30px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+
+.searchTitle {
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
 }
