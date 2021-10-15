@@ -1,0 +1,55 @@
+.topHero {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+  
+.topImg {
+    padding: 35px 40px;
+    width: 180px;
+    height: 180px;
+}
+  
+.topCard {
+    width: 265px;
+    margin-right: 35px;
+    padding-top: 35px;
+}
+  
+.topCardTitle {
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+  
+.topCardText {
+    padding-bottom: 13px;
+    font-size: 14px;
+    line-height: 16px;
+}
+  
+.topInnerBtn {
+    width: 101px;
+    height: 38px;
+    background: #9F0013;
+    margin-right: 30px;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 11px 18px;
+}
+  
+.topBtn {
+    width: 101px;
+    height: 38px;
+    background: #5C5C5C;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 11px 18px;
+}

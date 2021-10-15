@@ -1,0 +1,32 @@
+.random {
+    color: white;
+    padding: 35px 40px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #232222;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    background-image: url(../../assets/Decoration.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 33%;
+}
+  
+.randomText {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+  
+.randomBtn {
+    width: 101px;
+    height: 38px;
+    background: #9F0013;
+    color: white;
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+}

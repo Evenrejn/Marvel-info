@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+  
+.headerTitle {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+}
+  
+.headerTitleMain {
+    color: #9F0013;
+}
+  
+.headerBreadcrumbsMain {
+    color: #9F0013;
+}
+  
+.headerBreadcrumbs {
+    font-size: 24px;
+    line-height: 28px;
+}

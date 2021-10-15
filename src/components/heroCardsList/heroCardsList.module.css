@@ -1,0 +1,21 @@
+.cardList {
+    width: 60%;
+  }
+  
+.cardsWrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 675px;
+}
+
+.cardsListBtn {
+    width: 170px;
+    height: 38px;
+    background: #9F0013;
+    color: white;
+    margin: 14px auto 45px 240px;
+    padding: 10px 40px;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+}

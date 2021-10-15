@@ -1,0 +1,62 @@
+.about {
+    width: 425px;
+    box-sizing: border-box;
+    padding: 25px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+}
+  
+.aboutTop {
+    display: flex;
+    margin-bottom: 15px;
+}
+  
+.aboutImg {
+    width: 150px;
+    height: 150px;
+    margin-right: 25px;
+}
+  
+.aboutTitle {
+    margin-bottom: 35px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-transform: uppercase;
+}
+  
+.aboutInnerLink {
+    width: 101px;
+    height: 38px;
+    background: #9F0013;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 11px 18px;
+}
+  
+.aboutLink {
+    width: 101px;
+    height: 38px;
+    background: #5C5C5C;
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 11px 18px;
+}
+  
+.aboutDesc {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+}
+  
+.aboutComics {
+    margin-bottom: 14px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+  
