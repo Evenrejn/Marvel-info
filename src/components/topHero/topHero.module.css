@@ -41,6 +41,7 @@
     line-height: 16px;
     text-transform: uppercase;
     padding: 11px 18px;
+    text-decoration: none;
 }
   
 .topBtn {
@@ -52,4 +53,5 @@
     line-height: 16px;
     text-transform: uppercase;
     padding: 11px 18px;
+    text-decoration: none;
 }

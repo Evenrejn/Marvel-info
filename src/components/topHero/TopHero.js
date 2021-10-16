@@ -1,17 +1,66 @@
 import s from "./topHero.module.css";
+import { Component } from 'react';
+import MarvelService from "../../services/MarvelService";
+import Spinner from "../spinner/Spinner";
+import ErrorMessage from "../errorMessage/ErrorMessage";
 
-export const TopHero = () => {
-    return (
-        <div className={s.topHero}>
-            <img className={s.topImg} src="#" alt="hero"></img>
-            <div className={s.topCard}>
-            <h3 className={s.topCardTitle}>Thor</h3>
-            <p className={s.topCardText}>some desc</p>
-            <div className={s.topBtnWrap}>
-                <button className={s.topInnerBtn}>Homepage</button>
-                <button className={s.topBtn}>Wiki</button>
+export class TopHero extends Component {
+    constructor(props) {
+        super(props);
+        this.updateChar();
+    }
+
+    state = {
+        char: {},
+        loading: true,
+        error: false
+    }
+
+    marvelService = new MarvelService();
+
+    onCharLoaded = (char) => {
+        this.setState({
+            char, 
+            loading: false,
+        })
+    }
+
+    onError = () => {
+        this.setState({
+            loading: false,
+            error: true
+        })
+    }
+
+    updateChar = () => {
+        const id = Math.floor(Math.random() * (1011400 - 1011000) + 1011000);
+        this.marvelService
+            .getCharacter(id)
+            .then(this.onCharLoaded)
+            .catch(this.onError)
+    }
+
+    render() {
+        const {char: {name, desc, thumbnail, homepage, wiki}, loading, error} = this.state;
+        const errorMessage = error ? <ErrorMessage/> : null;
+        // const spinner = loading ? <Spinner/> : null;
+        // const content = !(loading || error);
+
+        return (
+            <div className={s.topHero}>
+            {errorMessage}
+            {loading ? <Spinner /> : <>
+                <img className={s.topImg} src={thumbnail} alt="hero"></img>
+                <div className={s.topCard}>
+                    <h3 className={s.topCardTitle}>{name}</h3>
+                    <p className={s.topCardText}>{desc || "No description"}</p>
+                    <div className={s.topBtnWrap}>
+                        <a href={homepage} className={s.topInnerBtn}>Homepage</a>
+                        <a href={wiki} className={s.topBtn}>Wiki</a>
+                    </div>
+                </div>
+            </>}
             </div>
-            </div>
-        </div>
-    )
+        )
+    }
 }
