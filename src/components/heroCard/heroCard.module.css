@@ -25,19 +25,19 @@
 }
   
 .aboutInnerLink {
-    width: 101px;
-    height: 38px;
     background: #9F0013;
     color: white;
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
     padding: 11px 18px;
+    display: block;
+    text-decoration: none;
+    width: 70px;
+    height: 15px;
 }
   
 .aboutLink {
-    width: 101px;
-    height: 38px;
     background: #5C5C5C;
     margin-top: 10px;
     color: white;
@@ -45,6 +45,10 @@
     line-height: 16px;
     text-transform: uppercase;
     padding: 11px 18px;
+    display: block;
+    text-decoration: none;
+    width: 30px;
+    height: 15px;
 }
   
 .aboutDesc {
@@ -60,3 +64,10 @@
     line-height: 21px;
 }
   
+.aboutComicsListsItem {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+    padding: 4px 10px;
+    font-size: 14px;
+    line-height: 16px;
+}
