@@ -1,5 +1,4 @@
 import s from "./heroCard.module.css";
-// import ComicsList from "../comicsList/ComicsList";
 import { Component } from "react";
 import MarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
@@ -74,17 +73,6 @@ export class HeroCard extends Component {
         {errorMessage}
         {spinner}
         {content}
-        {/* <div className={s.aboutTop}>
-          <img className={s.aboutImg} src="#" alt="hero"></img>
-          <div className={s.aboutTopWrap}>
-            <p className={s.aboutTitle}>Loki</p>
-            <button className={s.aboutInnerLink}>Homepage</button>
-            <button className={s.aboutLink}>Wiki</button>
-          </div>
-        </div>
-        <p className={s.aboutDesc}>Some desc</p>
-        <p className={s.aboutComics}>Comics:</p>
-        <ComicsList /> */}
       </section>
     )
   }
@@ -100,8 +88,6 @@ const View = ({char}) => {
           <p className={s.aboutTitle}>{name}</p>
           <a href={homepage} className={s.aboutInnerLink}>Homepage</a>
           <a href={wiki} className={s.aboutLink}>Wiki</a>
-          {/* <button className={s.aboutInnerLink}>Homepage</button>
-          <button className={s.aboutLink}>Wiki</button> */}
         </div>
       </div>
       <p className={s.aboutDesc}>{desc || "No information"}</p>
@@ -117,7 +103,6 @@ const View = ({char}) => {
           })
         }
       </ul>
-      {/* <ComicsList /> */}
     </>
   )
 }
