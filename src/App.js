@@ -5,43 +5,39 @@ import { HeroCardsList } from './components/heroCardsList/HeroCardsList';
 import { SearchPanel } from './components/searchPanel/SearchPanel';
 import { TopHero } from './components/topHero/TopHero';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
-import { Component } from 'react';
-import ErrorMessage from './components/errorMessage/ErrorMessage';
+import { useState } from 'react';
+// import ErrorMessage from './components/errorMessage/ErrorMessage';
 
-class App extends Component {
-  state = {
-    selectedChar: null
+const App = () => {
+
+  const [selectedChar, setChar] = useState(null);
+
+  const onCharSelected = (id) => {
+    setChar(id)
   }
 
-  onCharSelected = (id) => {
-    this.setState({
-      selectedChar: id
-    })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <AppHeader />
-        <div className="topWrap">
+  return (
+    <div className="App">
+      <AppHeader />
+      <div className="topWrap">
+      <ErrorBoundary>
+        <TopHero />
+      </ErrorBoundary>
+      </div>
+      <div className="mainWrap">
         <ErrorBoundary>
-          <TopHero />
+          <HeroCardsList onCharSelected={onCharSelected}/>
         </ErrorBoundary>
-        </div>
-        <div className="mainWrap">
+        <div>
           <ErrorBoundary>
-            <HeroCardsList onCharSelected={this.onCharSelected}/>
+              <HeroCard charId={selectedChar}/>
           </ErrorBoundary>
-          <div>
-            <ErrorBoundary>
-                <HeroCard charId={this.state.selectedChar}/>
-            </ErrorBoundary>
-            <SearchPanel />
-          </div>
+          <SearchPanel />
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+
 }
 
 export default App;
