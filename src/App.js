@@ -1,9 +1,9 @@
 import './App.css';
 import { AppHeader } from './components/appHeader/AppHeader';
-import { HeroCard } from './components/heroCard/HeroCard';
-import { HeroCardsList } from './components/heroCardsList/HeroCardsList';
+import HeroCard from './components/heroCard/HeroCard';
+import HeroCardsList from './components/heroCardsList/HeroCardsList';
 import { SearchPanel } from './components/searchPanel/SearchPanel';
-import { TopHero } from './components/topHero/TopHero';
+import TopHero from './components/topHero/TopHero';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import { useState } from 'react';
 // import ErrorMessage from './components/errorMessage/ErrorMessage';
@@ -20,9 +20,9 @@ const App = () => {
     <div className="App">
       <AppHeader />
       <div className="topWrap">
-      <ErrorBoundary>
+      {/* <ErrorBoundary> */}
         <TopHero />
-      </ErrorBoundary>
+      {/* </ErrorBoundary> */}
       </div>
       <div className="mainWrap">
         <ErrorBoundary>

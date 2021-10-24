@@ -1,17 +1,15 @@
 import s from "./heroCard.module.css";
 import { useState, useEffect } from "react";
-import MarvelService from "../../services/MarvelService";
+import useMarvelService from "../../services/MarvelService";
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import PropTypes from 'prop-types';
 
-export const HeroCard = (props) => {
+const HeroCard = (props) => {
 
   const [char, setChar] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
 
-  const marvelService = new MarvelService();
+  const {loading, error, getCharacter, clearError} = useMarvelService();
 
   useEffect(() => {
     updateChar();
@@ -23,28 +21,14 @@ export const HeroCard = (props) => {
       return;
     }
 
-    onCharLoading();
-
-    marvelService
-      .getCharacter(charId)
-      .then(onCharLoaded)
-      .catch(onError)
+    clearError();
+    getCharacter(charId)
+      .then(onCharLoaded);
   }
 
   const onCharLoaded = (char) => {
     setChar(char);
-    setLoading(false);
   }
-
-  const onCharLoading = () => {
-    setLoading(true);
-  }
-
-  const onError = () => {
-    setLoading(false);
-    setError(true);
-  }
-
 
   // const skeleton = char || loading || error ? null : <Skeleton />;
   const skeleton = char || loading || error ? null : null;
@@ -58,6 +42,7 @@ export const HeroCard = (props) => {
       {errorMessage}
       {spinner}
       {content}
+      {/* <View char={char}/> */}
     </section>
   )
 }
@@ -95,5 +80,5 @@ HeroCard.propTypes = {
   charId: PropTypes.number
 }
 
-
+export default HeroCard;
 
