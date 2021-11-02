@@ -7,6 +7,7 @@ import TopHero from './components/topHero/TopHero';
 import ErrorBoundary from './components/errorBoundary/ErrorBoundary';
 import { useState } from 'react';
 // import ErrorMessage from './components/errorMessage/ErrorMessage';
+import ComicsPage from "./components/comicsPage/ComicsPage";
 
 const App = () => {
 
@@ -19,11 +20,13 @@ const App = () => {
   return (
     <div className="App">
       <AppHeader />
-      <div className="topWrap">
-      {/* <ErrorBoundary> */}
-        <TopHero />
-      {/* </ErrorBoundary> */}
-      </div>
+      {/* <div className="topWrap"> */}
+
+        <ComicsPage />
+      {/*// <ErrorBoundary> */}
+        {/* <TopHero /> */}
+      {/*// </ErrorBoundary> */}
+      {/* </div>
       <div className="mainWrap">
         <ErrorBoundary>
           <HeroCardsList onCharSelected={onCharSelected}/>
@@ -33,8 +36,8 @@ const App = () => {
               <HeroCard charId={selectedChar}/>
           </ErrorBoundary>
           <SearchPanel />
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </div>
   );
 

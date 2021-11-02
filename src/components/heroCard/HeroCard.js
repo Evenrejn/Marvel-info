@@ -42,7 +42,6 @@ const HeroCard = (props) => {
       {errorMessage}
       {spinner}
       {content}
-      {/* <View char={char}/> */}
     </section>
   )
 }
