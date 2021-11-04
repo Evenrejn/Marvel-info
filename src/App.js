@@ -1,4 +1,5 @@
 import './App.css';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import { AppHeader } from './components/appHeader/AppHeader';
 import HeroCard from './components/heroCard/HeroCard';
 import HeroCardsList from './components/heroCardsList/HeroCardsList';
@@ -18,27 +19,34 @@ const App = () => {
   }
 
   return (
-    <div className="App">
-      <AppHeader />
-      {/* <div className="topWrap"> */}
-
-        <ComicsPage />
-      {/*// <ErrorBoundary> */}
-        {/* <TopHero /> */}
-      {/*// </ErrorBoundary> */}
-      {/* </div>
-      <div className="mainWrap">
-        <ErrorBoundary>
-          <HeroCardsList onCharSelected={onCharSelected}/>
-        </ErrorBoundary>
-        <div>
-          <ErrorBoundary>
-              <HeroCard charId={selectedChar}/>
-          </ErrorBoundary>
-          <SearchPanel />
-        </div> */}
-      {/* </div> */}
-    </div>
+    <Router>
+      <div className="App">
+        <AppHeader />
+        <Switch>
+          <Route exact path="/">
+            <div className="topWrap">           
+              {/* // <ErrorBoundary> */}
+              <TopHero />
+              {/* // </ErrorBoundary> */}
+            </div>
+            <div className="mainWrap">
+              <ErrorBoundary>
+                <HeroCardsList onCharSelected={onCharSelected}/>
+              </ErrorBoundary>
+              <div>
+                <ErrorBoundary>
+                    <HeroCard charId={selectedChar}/>
+                </ErrorBoundary>
+                <SearchPanel />
+              </div>
+            </div>
+          </Route>
+          <Route exact path="/comics">
+            <ComicsPage />
+          </Route>
+        </Switch>
+      </div>
+      </Router>
   );
 
 }
