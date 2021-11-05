@@ -1,5 +1,5 @@
 import s from "./appHeader.module.css";
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 export const AppHeader = () => {
     return (
@@ -10,10 +10,9 @@ export const AppHeader = () => {
                 information portal</h3>
             </Link>
             <h3 className={s.headerBreadcrumbs}>
-                <Link to="/"><a className={s.headerBreadcrumbsMain}>Characters </a></Link>
-                <Link to="/comics"><a className={s.headerBreadcrumbsMain}>/ Comics </a></Link>
-                {/* <span className={s.headerBreadcrumbsMain}>Characters </span> */}
-            / Comics</h3>
+                <NavLink exact activeStyle={{'color': '#9f0013'}} to="/"><a className={s.headerBreadcrumbsMain}>Characters </a></NavLink>
+                <NavLink activeStyle={{'color': '#9f0013'}} to="/comics"><a className={s.headerBreadcrumbsMain}>/ Comics </a></NavLink>
+            </h3>
         </header>
     )
 }
