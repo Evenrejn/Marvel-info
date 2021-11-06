@@ -41,19 +41,27 @@ const View = ({comic}) => {
     const {title, description, pageCount, thumbnail, language, price} = comic;
 
     return (
-        <div className={s.wrap}>
-            <div>
-                <img className={s.comicImg} src={thumbnail} alt={title}></img>
-                <div className={s.descWrap}>
-                    <h3 className={s.title}>{title}</h3>
-                    <p className={s.text}>{description}</p>
-                    <p className={s.pages}>{pageCount}</p>
-                    <p className={s.lang}>Language: {language}</p>
-                    <h3 className={s.price}>{price}</h3>
+        <>
+            <div className={s.top}>
+                <div className={s.topWrap}>
+                    <p className={s.topText}>New comics every week!</p>
+                    <p className={s.topText}>Stay tuned!</p>
                 </div>
             </div>
-            <Link to="/comics" className={s.link}>Back to all</Link>
-        </div>
+            <div className={s.wrap}>
+                <div>
+                    <img className={s.comicImg} src={thumbnail} alt={title}></img>
+                    <div className={s.descWrap}>
+                        <h3 className={s.title}>{title}</h3>
+                        <p className={s.text}>{description}</p>
+                        <p className={s.pages}>{pageCount}</p>
+                        <p className={s.lang}>Language: {language}</p>
+                        <h3 className={s.price}>{price}</h3>
+                    </div>
+                </div>
+                <Link to="/comics" className={s.link}>Back to all</Link>
+            </div>
+        </>
     )
 }
 
