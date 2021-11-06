@@ -48,7 +48,7 @@ const TopHero = () => {
                     <a href={char.wiki} className={s.topBtn}>Wiki</a>
                 </div>
             </div>
-            </> : null};
+            </> : null}
         </div>
             <div className={s.random}>
                 <div className={s.randomWrap}>

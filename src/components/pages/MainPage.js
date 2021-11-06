@@ -3,9 +3,7 @@ import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 import HeroCard from '../heroCard/HeroCard';
 import HeroCardsList from '../heroCardsList/HeroCardsList';
 import { SearchPanel } from '../searchPanel/SearchPanel';
-
 import { useState } from 'react';
-
 
 const MainPage = () => {
 
